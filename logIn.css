@@ -48,7 +48,7 @@
             width: 100%;
             font-size: 1.2rem;
             border: 1px solid #D1D5DB;
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 10px 2em;
             outline: none;
             margin-bottom: 10px;
@@ -78,7 +78,7 @@
             justify-content: center;
             font-size: 1.1rem;
             color: #fff;
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 10px;
             letter-spacing: 0.1em;
             gap: 5px;
@@ -139,7 +139,6 @@
                 margin: 8rem 0 0;
             }
             .form input {
-                font-size: 1rem;
                 padding: 10px;
             }
             .login-btn,

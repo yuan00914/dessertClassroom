@@ -1,270 +1,280 @@
-        .course {
-            padding: 8em 0 0;
-        }
-        .course-container {
-            max-width: 1000px;
-            display: flex;
-            padding: 0 20px;
-            justify-content: center;
-            margin: auto;
-            
-            font-family: "Kiwi Maru", serif;
-            color: #614D3B;
-        }
-        
-        .course-left, .course-right{
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            justify-content: flex-end;
+.course {
+  padding: 8em 0 0;
+}
+.course-container {
+  max-width: 1200px;
+  display: flex;
+  padding: 0 40px;
+  justify-content: center;
+  margin: auto;
 
-            padding: 0 20px;
-            gap: 1rem;
-        }
-        
-        .course-list {
-            display: flex;
-            max-width: 450px;
-            margin: 0 auto .5rem;
-            padding: 0;
-            gap: 10px;
-            font-size: 18px;
-        }
-        .course-list li{
-            display: inline-block;
-        }
-        .course-list li::before{
-            content: '/';
-            margin-right: 10px;
-        }
-        .course-list li:first-child:before{
-            content: '';
-            margin-right: 0;
-        }
-        .course-list li:hover{
-            color: #FBBD60;
-        }
-        
-        /* 輪播容器 */
-        .course-pic-container {
-            position: relative;
-            width: 450px;
-            height: 100%;
-            min-height: 400px;
-            margin: 0 auto;
-        }
+  font-family: "Kiwi Maru", serif;
+  color: #614d3b;
+}
 
-        .course-pic {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-        }
-        .course-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute; /* 讓圖片重疊 */
-        }
-        .course-pic img.active {
-            display: block; /* 只顯示第一張 */
-        }
+.course-left,
+.course-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
 
-        /* 左右按鈕樣式 */
-        .slide-btns button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 20px;
-            z-index: 10;
-        }
-        .slide-prev { left: 10px; }
-        .slide-next { right: 10px; }
-        .slide-btns button:hover {
-            background: #FBBD60;
-        }
-        
-        
-        h2 {
-            font-size: 36px;
-        }
-        .course-go {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: space-evenly;
-            gap: 1.5rem;
-            font-family: "Kiwi Maru", serif;
-            font-size: 36px;
-            color: #F35C2F;
-        }
-        .course-price {
-            font-size: 2rem;
-        }
-        .course-btn {
-            font-family: "Kiwi Maru", serif;
-            font-size: 24px;
-            color: #614D3B;
-            background-color: #FBBD60;
-            border-radius: 24px;
-            box-shadow: 2px 4px #614D3B;
-            padding: 5px 20px;
-            margin: 0 1rem;
-            transition: 0.3s;
-        }
-        .course-btn:hover {
-            transform: translateY(-10px);
-            transition: 0.3s;
-        }
-        .course-tag {
-            display: flex;
-            justify-content: space-evenly;
-            font-family: "Noto Sans TC", sans-serif;
-            color: #614D3B;
-            font-size: 1.1rem;
-            background-color: #F3CDB5;
-            border-radius: 24px 24px 0 0;
-            padding: 0.2em 0;
-        }
-        .tag {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: .5rem;
-            align-items: center;
-        }
-        .tag-img{
-            width: 60%;
-        }
-        .tag-img img{
-            width: 100%;
-        }
-        .course-content {
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 1.1rem;
-            color: #614D3B;
-            background-color: #FEFCF8;
-            line-height: 1.7;
-            border-radius: 0 0 24px 24px;
-            padding: 2rem;
-        }
-        
-        .reg {
-            max-width: 70%;
-            margin: 4rem auto 0;
-        }
-        .reg-container {
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 1.1rem;
-            color: #614D3B;
-            background-color: #FEFCF8;
-            line-height: 1.8;
-            border-radius: 24px;
-            padding: 2.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .reg-text{
-            max-width: 60%;
-            margin: 0 auto;
-        }
+  padding: 0 20px;
+  gap: 1rem;
+}
 
-    @media (max-width: 1200px) {
-        .course-container {
-            gap: 20px;
-            padding: 0 40px;
-        }
-        .course-pic-container {
-            width: 100%; /* 讓寬度隨父層彈性縮放 */
-            max-width: 400px;
-            height: 300px;
-        }
-    }
+.course-list {
+  display: flex;
+  max-width: 450px;
+  margin: 0 auto 0.5rem;
+  padding: 0;
+  gap: 10px;
+  font-size: 18px;
+}
+.course-list li {
+  display: inline-block;
+}
+.course-list li::before {
+  content: "/";
+  margin-right: 10px;
+}
+.course-list li:first-child:before {
+  content: "";
+  margin-right: 0;
+}
+.course-list li:hover {
+  color: #fbbd60;
+}
 
-    @media (max-width: 992px) {
-        .course {
-            padding: 6em 0 0;
-        }
-        .course-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        h2 {
-            font-size: 28px;
-        }
-        .course-pic-container {
-            max-width: 450px;
-            height: 300px;
-            min-height: auto;
-        }
-        
-        .course-list {
-            justify-content: center;
-        }
-        .course-go {
-            justify-content: center;
-        }
-        .course-price {
-            font-size: 1.6rem;
-        }
-        .course-btn {
-            font-size: 20px;
-            padding: 5px 15px;
-        }
-        .course-content{
-            padding: 1rem;
-        }
-        .reg-text {
-            max-width: 100%;
-            font-size: 1rem;
-        }
-    }
+/* 輪播容器 */
+.course-pic-container {
+  position: relative;
+  width: 450px;
+  height: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+}
 
-    @media (max-width: 480px) {
-        .course {
-            padding: 5em 0 0;
-        }
-        .course-container{
-            gap: 10px;
-        }
-        .course-left, .course-right{
-            gap: 0;
-        }
-        .course-list{
-            font-size: 13px;
-        }
-        h2 {
-            font-size: 22px;
-        }
-        .course-pic-container {
-            max-width: 280px;
-            height: 220px;
-        }
-        .course-tag {
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px 0;
-        }
-        .tag {
-            padding: 0.2rem;
-        }
-        .tag-txt {
-            font-size: 0.9rem;
-        }
-        .course-go {
-            align-items: center;
-            margin: .5rem 0 1rem;
-        }
-        .course-price{
-            font-size: 1.4rem;
-        }
-        .course-btn{
-            font-size: 16px;
-        }
-    }
+.course-pic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.course-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; /* 讓圖片重疊 */
+}
+.course-pic img.active {
+  display: block; /* 只顯示第一張 */
+}
+
+/* 左右按鈕樣式 */
+.slide-btns button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  z-index: 10;
+}
+.slide-prev {
+  left: 10px;
+}
+.slide-next {
+  right: 10px;
+}
+.slide-btns button:hover {
+  background: #fbbd60;
+}
+
+h2 {
+  font-size: 36px;
+}
+.course-go {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: space-evenly;
+  gap: 1.5rem;
+  font-family: "Kiwi Maru", serif;
+  font-size: 36px;
+  color: #f35c2f;
+}
+.course-price {
+  font-size: 2rem;
+}
+.course-btn {
+  font-family: "Kiwi Maru", serif;
+  font-size: 24px;
+  color: #614d3b;
+  background-color: #fbbd60;
+  border-radius: 24px;
+  box-shadow: 2px 4px #614d3b;
+  padding: 5px 20px;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+.course-btn:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+.course-tag {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #614d3b;
+  font-size: 1.1rem;
+  background-color: #f3cdb5;
+  border-radius: 12px 12px 0 0;
+  padding: 0.2em 0;
+}
+.tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  align-items: center;
+}
+.tag-img {
+  width: 30px;
+  height: 30px;
+}
+.tag-img img {
+  width: 100%;
+}
+.course-content {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  color: #614d3b;
+  background-color: #fefcf8;
+  line-height: 1.7;
+  border-radius: 0 0 12px 12px;
+  padding: 2rem;
+  text-align: start;
+}
+
+.reg {
+  max-width: 80%;
+  margin: 3rem auto 0;
+}
+.reg-container {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  color: #614d3b;
+  background-color: #fefcf8;
+  line-height: 1.8;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.reg-text {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .course-container {
+    gap: 20px;
+  }
+  .course-pic-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .course {
+    padding: 6em 0 0;
+  }
+  .course-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .course-pic-container {
+    max-width: 450px;
+    height: 300px;
+    min-height: auto;
+  }
+
+  .course-list {
+    justify-content: center;
+  }
+  .course-go {
+    justify-content: center;
+  }
+  .course-price {
+    font-size: 1.6rem;
+  }
+  .course-btn {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+  .course-content {
+    padding: 1rem;
+  }
+  .reg {
+    max-width: 70%;
+  }
+  .reg-text {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    padding: 5em 0 0;
+  }
+  .course-container {
+    gap: 10px;
+  }
+  .course-left,
+  .course-right {
+    gap: 0;
+  }
+  .course-list {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .course-pic-container {
+    max-width: 280px;
+    height: 220px;
+  }
+  .course-tag {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .tag {
+    padding: 0.2rem;
+  }
+  .tag-txt {
+    font-size: 0.9rem;
+  }
+  .course-go {
+    align-items: center;
+    margin: 0.5rem 0 1rem;
+    gap: 1rem;
+  }
+  .course-price {
+    font-size: 1.4rem;
+  }
+  .course-btn {
+    font-size: 16px;
+  }
+}

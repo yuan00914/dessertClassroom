@@ -124,10 +124,7 @@
 }
 
 .hot-button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: 0.3s;
+  display: inline-block;
 }
 
 .hot-wrapper {
@@ -230,8 +227,10 @@
     gap: 20px;
   }
   .hot-button {
-    position: static; /* 取消絕對定位 */
-    margin-top: 20px;
+    margin: 20px auto 0;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
   }
   .hot-container {
     gap: 20px;
@@ -241,11 +240,6 @@
   }
   .hot-text p {
     font-size: 1rem;
-  }
-  .hot-button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
   }
   .hot-wrapper {
     -webkit-overflow-scrolling: touch;
@@ -277,6 +271,7 @@
     font-size: 0.9rem;
   }
   .hot-button {
+    margin: 10px auto 0;
     width: 40px;
     height: 40px;
     font-size: 1rem;
